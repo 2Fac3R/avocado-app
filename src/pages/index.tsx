@@ -6,7 +6,7 @@ import ProductList from '@components/ProductList/ProductList'
 
 const apiUrl = 'https://avocado-app-wine.vercel.app/api/avo'
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch(apiUrl)
   const { data: productList }: TAPIAvoResponse = await response.json()
 
